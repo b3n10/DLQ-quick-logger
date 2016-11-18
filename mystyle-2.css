@@ -85,11 +85,6 @@ html, body {
   border-radius: 2px;  
 }
 
-.container_pageone input[type="text"] {
-  width: 170px;
-}
-
-
 /*Column divider*/
 .col_div {
   display: inline-block;
@@ -167,11 +162,6 @@ textarea {
   height: 100px;
 }
 
-textarea, input[type="text"] {
-  width: 98%;
-  border: 1px #888585 solid;
-}
-
 textarea:focus, input[type="text"]:focus {
   outline: white solid 1px;
 }
@@ -180,7 +170,7 @@ input[type="radio"]:hover {
   cursor: pointer;
 }
 
-select {
+textarea, input[type="text"], select {
   width: 100%;
 }
 
