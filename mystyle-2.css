@@ -1,0 +1,304 @@
+/*import fonts if reachable*/
+@import url('https://fonts.googleapis.com/css?family=Coiny|Montserrat');
+
+
+* {
+  box-sizing: border-box;
+  /*border: solid green 1px;*/
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  /*font-family: 'Coiny', cursive;*/
+}
+
+/*remove all marin/padding*/
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*wrap elements if screen < 600px*/
+@media screen and (max-width: 600px) {
+  #popup_agentdescription, #top_div, #mid_div {
+    display: block;
+    flex-wrap: wrap;
+  }
+}
+
+/*Container: Main, Top, Bottom divider*/
+#main_div {
+  display: block;
+  margin: auto;
+  text-align: center;
+  max-width: 650px;
+  position: relative;
+  /*background: black;*/
+}
+
+#top_div, #mid_div, #bottom_div {
+  display: flex;
+  width: 100%;
+  padding: 2px 2px 2px 2px;
+}
+
+#mid_div, #bottom_div {
+  /*padding: 0 5px 0 5px;*/
+}
+
+/*container per page*/
+.container_pageone, .container_pagetwo {
+  position: absolute;
+  margin-top: 20px;
+  padding: 2px 2px 2px 2px;
+}
+
+/*page two*/
+.container_pagetwo {
+  display: none;
+  width: 480px;
+  height: 355px;
+  background-color: white;
+  left: 85px;
+}
+
+.container_pagetwo > #mid_div {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 280px;
+  margin-top: 10px;
+}
+
+.container_pagetwo > #mid_div > .col_div > .div_row {
+  width: inherit;
+  display: block;
+}
+
+.container_pagetwo > #mid_div > .div_sub_row {
+  height: 90%;
+}
+
+.container_pagetwo > #mid_div > .div_sub_row > textarea {
+  width: 450px;
+  height: 100%;
+  border-radius: 2px;  
+}
+
+.container_pageone input[type="text"] {
+  width: 170px;
+}
+
+
+/*Column divider*/
+.col_div {
+  display: inline-block;
+  width: 310px;
+  margin-left: 2px;
+  margin-top: 2px;
+  border: 1px solid black;
+}
+
+/*Child dividers*/
+.div_row {
+  width: 100%;
+/*  border: solid red 1px;*/
+  display: flex;
+}
+
+.div_row:hover {
+  background-color: rgb(255, 221, 160);
+}
+
+.div_sub_row {
+  padding: 2px;
+  width: inherit;
+  min-width: 100px;
+}
+
+.div_label {
+  padding: 3px;
+  height: 100%;
+  min-width: 100px;
+  text-align: left;
+}
+
+/*fontsize override*/
+.min210 {
+  min-width: 210px;
+}
+
+.min150 {
+  min-width: 130px;
+}
+
+.label {
+  width: inherit;
+}
+
+/*Button, Input, Textarea default property/values*/
+button {
+  width: inherit;
+  height: 30px;
+  color: #fff;
+  background: rgb(0, 133, 195);
+  border-radius: 1px;
+  border: solid white 1px;
+  margin: 2px 2px 2px 2px;
+}
+
+button:hover {
+  color: black;
+  background-color: #52d2f9;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #52d2f9;
+  transform: translateY(1px);
+}
+
+button:focus {
+  color: black;
+  background-color: #52d2f9;
+}
+
+textarea {
+  height: 100px;
+}
+
+textarea, input[type="text"] {
+  width: 98%;
+  border: 1px #888585 solid;
+}
+
+textarea:focus, input[type="text"]:focus {
+  outline: white solid 1px;
+}
+
+input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+select {
+  width: 100%;
+}
+
+/*top buttons*/
+.option {
+  width: inherit;
+  height: 25px;
+  font-weight: bold;
+  margin: 0px 1px 0px 1px;
+}
+
+div.option > button, .btn_selectionmenu {
+  width: 100%;
+  height: inherit;
+  color: white;
+  background-color: #363d47;
+  border: 1px solid white;
+}
+
+div.option > button:hover, .btn_selectionmenu:hover {
+  color: black;
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+div.option > button:focus, .btn_selectionmenu:focus {
+  color: #ffffff;
+  background-color: #626e82;
+}
+
+label#lbl_select {
+  color: #285296;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*popups*/
+#popup_agentdescription {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+  display: flex;
+  display: none;
+}
+
+#popup_agentdescription > ul {
+  text-align: left;
+  padding-left: 25px;
+}
+
+/*space for mid col*/
+#txt_customerresponse {
+  height: 100px;
+}
+
+.col_div > div {
+
+}
+
+
+/*script col*/
+.script_col_div {
+  display: flex;
+  flex-wrap: wrap;
+  background: none;
+  width: 50%;
+  height: 100%;
+  padding: 2px 0px 2px 0px;
+}
+
+.div_script {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.btn_selectionmenu, .div_subselectionmenu a {
+  width: 100%;
+  font-size: 12px;
+}
+
+.div_subselectionmenu {
+  position: absolute;
+  width: 200%;
+  top: 0px;
+  left: -200%;
+  background: #363d47;
+  border: 1px solid white;
+  display: none;
+}
+
+.div_subselectionmenu a {
+  color: white;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.div_subselectionmenu a:hover {
+  color: black;
+  background-color: #d9d9d9;
+}
+
+.div_script:hover .div_subselectionmenu  {
+  display: block;
+}
+
+/*top scripts*/
+.txt_scripts {
+  height: 60px;
+  color: black;
+  background-color: white;
+}
+
+/*radio buttons label*/
+.div_sub_row > label:hover {
+  cursor: pointer;  
+}
