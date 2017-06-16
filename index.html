@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- using meta tag to force IE on version 10+ -->
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta charset="utf-8">
+		<meta name="author" content="Francis Ben Lleve">
+		<meta name="description" content="Quick Call Logger. Tool necessary only for quick calls. Normal inbound/outbound calls should still be logged using DLQ Call Logger.">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="scripts/script.js" async></script>
+		<title>Quick Call Logger</title>
+	</head>
+	<body>
+		<div id="main_div">
+
+			<div class="container_pageone">
+
+				<div id="mid_div">
+
+					<div id="lef_col_div" class="col_div">
+						<div class="div_row">
+							<div class="div_label min150">
+								<label for="txt_customername">Customer Name:</label>
+							</div>
+							<div class="div_sub_row">
+								<input type="text" id="txt_customername">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min150">
+								<label for="txt_servicetag">Service Tag:</label>
+							</div>
+							<div class="div_sub_row">
+								<input type="text" id="txt_servicetag">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min150">
+								<label for="txt_servicerequest">Service Request:</label>
+							</div>
+							<div class="div_sub_row">
+								<input type="text" id="txt_servicerequest">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min150">
+								<label for="txt_systemtype">System Type:</label>
+							</div>
+							<div class="div_sub_row">
+								<input type="text" id="txt_systemtype">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min150">
+								<label for="txt_issue">Issue:</label>
+							</div>
+							<div class="div_sub_row">
+								<input type="text" id="txt_issue">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_sub_row">
+								<label>Call Flow</label>
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label>Restate Issue:</label>
+							</div>
+							<div class="div_sub_row">
+								<label for="rdo_restateissueyes">Yes</label>
+								<input type="radio" id="rdo_restateissueyes" name="rdo_restateissue">
+								<label for="rdo_restateissueno">No</label>
+								<input type="radio" id="rdo_restateissueno" name="rdo_restateissue">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label>Accountability Statement:</label>
+							</div>
+							<div class="div_sub_row">
+								<label for="rdo_accountabilitystatementyes">Yes</label>
+								<input type="radio" id="rdo_accountabilitystatementyes" name="rdo_accountabilitystatement">
+								<label for="rdo_accountabilitystatementno">No</label>
+								<input type="radio" id="rdo_accountabilitystatementno" name="rdo_accountabilitystatement">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label>Warranty Education:</label>
+							</div>
+							<div class="div_sub_row">
+								<label for="rdo_warrantyeducationyes">Yes</label>
+								<input type="radio" id="rdo_warrantyeducationyes" name="rdo_warrantyeducation">
+								<label for="rdo_warrantyeducationno">No</label>
+								<input type="radio" id="rdo_warrantyeducationno" name="rdo_warrantyeducation">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label>Supported Boundaries:</label>
+							</div>
+							<div class="div_sub_row">
+								<label for="rdo_supportedboundariesyes">Yes</label>
+								<input type="radio" id="rdo_supportedboundariesyes" name="rdo_supportedboundaries">
+								<label for="rdo_supportedboundariesno">No</label>
+								<input type="radio" id="rdo_supportedboundariesno" name="rdo_supportedboundaries">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min150">
+								<label for="txt_whynotsupported">---------Why Not?</label>
+							</div>
+							<div class="div_sub_row">
+								<input type="text" id="txt_whynotsupported" disabled>
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label>Game Plan Communicated:</label>
+							</div>
+							<div class="div_sub_row">
+								<label for="rdo_gameplancommunicatedyes">Yes</label>
+								<input type="radio" id="rdo_gameplancommunicatedyes" name="rdo_gameplancommunicated">
+								<label for="rdo_gameplancommunicatedno">No</label>
+								<input type="radio" id="rdo_gameplancommunicatedno" name="rdo_gameplancommunicated">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label>Fee Based Communicated:</label>
+							</div>
+							<div class="div_sub_row">
+								<label for="rdo_feebasedcommunicatedyes">Yes</label>
+								<input type="radio" id="rdo_feebasedcommunicatedyes" name="rdo_feebasedcommunicated">
+								<label for="rdo_feebasedcommunicatedno">No</label>
+								<input type="radio" id="rdo_feebasedcommunicatedno" name="rdo_feebasedcommunicated">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label>Self-help Option Provided:</label>
+							</div>
+							<div class="div_sub_row">
+								<label for="rdo_selfhelpoptionprovidedyes">Yes</label>
+								<input type="radio" id="rdo_selfhelpoptionprovidedyes" name="rdo_selfhelpoptionprovided">
+								<label for="rdo_selfhelpoptionprovidedno">No</label>
+								<input type="radio" id="rdo_selfhelpoptionprovidedno" name="rdo_selfhelpoptionprovided">
+							</div>
+						</div>      
+
+					</div>
+
+					<div id="rit_col_div" class="col_div">
+						<div class="div_row">
+							<div class="div_sub_row">
+								<label>Transfer Procedure</label>
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label>Phone Number Provided:</label>
+							</div>
+							<div class="div_sub_row">
+								<label for="rdo_phonenumberprovidedyes">Yes</label>
+								<input type="radio" id="rdo_phonenumberprovidedyes" name="rdo_phonenumberprovided">
+								<label for="rdo_phonenumberprovidedno">No</label>
+								<input type="radio" id="rdo_phonenumberprovidedno" name="rdo_phonenumberprovided">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label>Dept Name Communicated:</label>
+							</div>
+							<div class="div_sub_row">
+								<label for="rdo_deptnamecommunicatedyes">Yes</label>
+								<input type="radio" id="rdo_deptnamecommunicatedyes" name="rdo_deptnamecommunicated">
+								<label for="rdo_deptnamecommunicatedno">No</label>
+								<input type="radio" id="rdo_deptnamecommunicatedno" name="rdo_deptnamecommunicated">
+							</div>
+						</div> 
+
+
+						<div class="div_row">
+							<div class="div_sub_row">
+								<label>Call Closing</label>
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label>Further Assistance Needed:</label>
+							</div>
+							<div class="div_sub_row">
+								<label for="rdo_furtherassistanceneededyes">Yes</label>
+								<input type="radio" id="rdo_furtherassistanceneededyes" name="rdo_furtherassistanceneeded">
+								<label for="rdo_furtherassistanceneededno">No</label>
+								<input type="radio" id="rdo_furtherassistanceneededno" name="rdo_furtherassistanceneeded">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label>Call Branding Communicated:</label>
+							</div>
+							<div class="div_sub_row">
+								<label for="rdo_callbrandingcommunicatedyes">Yes</label>
+								<input type="radio" id="rdo_callbrandingcommunicatedyes" name="rdo_callbrandingcommunicated">
+								<label for="rdo_callbrandingcommunicatedno">No</label>
+								<input type="radio" id="rdo_callbrandingcommunicatedno" name="rdo_callbrandingcommunicated">
+							</div>
+						</div>
+
+						<div class="div_row">
+							<div class="div_label min210">
+								<label for="txt_detailedcomments">Detailed Comments:</label>
+							</div>
+						</div>      
+						<div class="div_row">
+							<div class="div_sub_row">
+								<textarea id="txt_detailedcomments"></textarea>
+							</div>
+						</div>    
+
+						<div class="div_row">
+							<div class="div_label min150">
+								<label for="txt_resolution">Resolution:</label>
+							</div>
+							<div class="div_sub_row">
+								<input type="text" id="txt_resolution">
+							</div>
+						</div> 
+
+						<div class="div_row">
+							<div class="div_label min150">
+								<label for="txt_callduration">Call Duration:</label>
+							</div>
+							<div class="div_sub_row">
+								<input type="text" id="txt_callduration">
+							</div>
+						</div>     
+					</div>
+
+				</div>
+
+
+				<div id="bottom_div">
+					<div class="div_row">
+						<div class="div_sub_row">
+							<button id="btn_clear">Clear</button>
+						</div>
+						<div class="div_sub_row">
+							<button id="btn_preview">Preview</button>
+						</div>
+					</div>
+				</div>  
+
+			</div>
+
+			<div class="container_pagetwo">
+				<div id="mid_div">
+					<div class="div_row">
+						<label for="txt_previewtext">Preview Text</label>
+					</div>
+					<div class="div_sub_row">
+						<textarea id="txt_previewtext"></textarea>
+					</div>
+				</div>
+
+				<div id="bottom_div">
+					<div class="div_row">
+						<div class="div_sub_row">
+							<button id="btn_clearandclose">Clear all & Close</button>
+						</div>
+						<div class="div_sub_row">
+							<button id="btn_close">Close</button>
+						</div>
+						<div class="div_sub_row">
+							<button id="btn_copy">Copy</button>
+						</div>        
+					</div>      
+				</div>
+			</div>
+
+		</div>
+
+
+	</body>
+</html>
